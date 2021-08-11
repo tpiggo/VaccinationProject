@@ -1,0 +1,24 @@
+2021-08-10 08:58:43pm: Connection has been opened to localhost, hso! 
+2021-08-10 08:58:43pm: Connection is working to localhost, hso! 
+2021-08-10 08:58:47pm: Connection has been opened to localhost, hso! 
+2021-08-10 08:58:47pm: Connection is working to localhost, hso! 
+2021-08-10 09:09:10pm: Connection has been opened to localhost, hso! 
+2021-08-10 09:09:10pm: Connection is working to localhost, hso! 
+2021-08-10 09:09:13pm: Connection has been opened to localhost, hso! 
+2021-08-10 09:09:13pm: Connection is working to localhost, hso! 
+2021-08-11 12:54:33am: Connection has been opened to localhost, hso! 
+2021-08-11 12:54:33am: Connection is working to localhost, hso! 
+2021-08-11 02:02:17am: Connection has been opened to localhost, hso! 
+2021-08-11 02:02:17am: Connection is working to localhost, hso! 
+2021-08-11 02:17:27am: Connection has been opened to localhost, hso! 
+2021-08-11 02:17:59am: Connection has been opened to localhost, hso! 
+2021-08-11 02:18:12am: Connection has been opened to localhost, hso! 
+2021-08-11 02:19:05am: Connection has been opened to localhost, hso! 
+2021-08-11 02:19:05am: Connection instance created! 
+2021-08-11 03:10:02am: Connection has been opened to localhost, hso! 
+2021-08-11 03:10:02am: Connection instance created! 
+2021-08-11 03:23:04am: Connection has been opened to localhost, hso! 
+2021-08-11 03:23:04am: Connection instance created! 
+2021-08-11 03:23:28am: Connection has been opened to localhost, hso! 
+2021-08-11 03:23:28am: Connection instance created! 
+2021-08-11 03:36:23am: Connection has been opened to localhost, hso! 
