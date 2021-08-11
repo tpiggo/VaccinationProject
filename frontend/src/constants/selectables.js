@@ -3,7 +3,7 @@ const selectables = [
     'Public Health Worker',
     'Public Health Facility',
     'Vaccination Type',
-    'Covid-19 infection Variant type',
+    'Covid-19 Infection Variant Type',
     'Group Age'
 ];
 
