@@ -45,24 +45,282 @@ switch($json_obj->type) {
 }
 
 fclose($of2);
+
+function insert_Person($conn, $fname, $lname, $phone, $email, $dob, $passport, $medicare, $address, $postalcode, $country, $city) {
+    try {
+        $query = $conn->prepare('INSERT into phoneAddress (phone, address) values (?,?)');
+        $query->bind_param('ss', $phone, $address);
+        $rq = $query->execute();
+        if ($rq === false) {
+            $sql_query = "SELECT address from phoneaddress where phone='$phone'";
+            $result = $conn->query($sql_query);
+            if (!empty($result) && $result->num_rows > 0) {
+                $db_out = array();
+                while ($row = $result->fetch_assoc()) {
+                    array_push($db_out, $row);
+                }
+                if ($db_out[0]['address'] !== $address) {
+                    return array('response' => 'Error. Address does not match.');
+                }
+            } elseif (empty($result)) {
+                return array("response" => 'Fatal: Error');
+            }
+            
+        }
+    } catch (mysqli_sql_exception $e) {
+        $conn->rollback();
+        return array('response' => 'Error. Failed to insert phoneaddress');
+    }
+
+    try {
+        $pquery = $conn->prepare(
+            'INSERT into 
+            person (city, dateofbirth, firstname, lastname, emailaddress, postalCode, phone, medicarenumber, passport) 
+            values (?,?,?,?,?,?,?,?,?)');
+        $pquery->bind_param('sssssssss', $city, $dob, $fname, $lname, $email, $postalcode, $phone, $medicare, $passport);
+        $rq = $pquery->execute();
+        if ($rq === false) {
+            return array('response' => 'Error. Failed to insert, person passport already exists.');
+        }
+    } catch (mysqli_sql_exception $e) {
+        $conn->rollback();
+        return array('response' => 'Error. Failed to insert person.');
+    }
+    return array('response' => 'Success');
+}
+
 /**
  * pseudoRoutes
  * Assumed that all the data coming in has been checked on the frontend.
  * This is an application on a secure server. We do not worry about 'bad guys';
  */
 function createPersonRoute($data) {
-    
-    return json_encode(array('response' => 'Hit the person route'));
+    if (count($data) < 11)  {
+        return json_encode(array('response' => 'Error! Bad input!'));
+    }
+    $fname = $data[0]->value;
+    $lname = $data[1]->value;
+    $email = $data[2]->value;
+    $phone = $data[3]->value;
+    $dob = $data[4]->value;
+    $passport = $data[5]->value;
+    $medicare = $data[6]->value;
+    $address = $data[7]->value;
+    $city = $data[8]->value;
+    $postalcode = $data[9]->value;
+    $country = $data[10]->value;
+
+    $db = new DBConnection();
+    $conn = $db->getConnection();
+    $result = insert_Person(
+        $conn, 
+        $fname, 
+        $lname, 
+        $phone, 
+        $email, 
+        $dob, 
+        $passport, 
+        $medicare, 
+        $address, 
+        $postalcode, 
+        $country, 
+        $city
+    );
+    if ($result['response'] == 'Success') {
+        // extract the infection records
+        // data here should be good, verified it is full on the frontend.
+        $pid = $conn->insert_id;
+        $failed  = false;
+        for ($x = 11; $x < count($data); $x+=2) {
+            try {
+                $query = $conn->prepare(
+                    "INSERT INTO infectionRecords (personID, infecteddate, typInfection) values (?,?,?)"
+                );
+                // Must have created "Unknown" in CovidInfections or else this will fail.
+                $type = $data[$x+1]->value!==''?$data[$x+1]->value:'Unknown';
+                $query->bind_param('iss', $pid, $data[$x]->value, $type);
+                if ( $query->execute() == false ) {
+                    throw new Exception("Error!");
+                }
+
+            } catch( Exception $e ){
+                $conn->rollback();
+                $failed = true;
+            } finally {
+                $conn->commit();
+            }
+            if ($failed == true) {
+                return json_encode(array('response' => "Error. Failed to enter a new infection for person" . $pid));
+            }
+        }
+        // Success if you get here
+        return json_encode($result);
+    }
+    return json_encode($result);
 }
 
 function createPHWRoute($data) {
+    if (count($data) != 12)  {
+        return json_encode(array('response' => 'Error! Bad input!'));
+    }
 
-    return json_encode(array('response' => 'Hit the phw route'));
+    // same problem here which may need resolving later
+    // or not who the fuck knows
+    // Extract the data from the JSON.
+    $fname = $data[0]->value;
+    $lname = $data[1]->value;
+    $ssn = $data[2]->value;
+    $email = $data[3]->value;
+    $phone = $data[4]->value;
+    $dob = $data[5]->value;
+    $passport = $data[6]->value;
+    $medicare = $data[7]->value;
+    $address = $data[8]->value;
+    $city = $data[9]->value;
+    $postalcode = $data[10]->value;
+    $country = $data[11]->value;
+    // data handling?! ie. actually setting empties to null etc.
+    $db = new DBConnection();
+    $conn = $db->getConnection();
+
+    $result = $conn->query("SELECT * from Person where medicarenumber='$medicare'");
+    $of = fopen("db_output.txt", 'a');
+    fwrite($of, "was empty?" . empty($result) . " true  = 1 \n" );
+    fwrite($of, "was empty?" . json_encode($result) . " true  = 1 \n" );
+    fclose($of);
+    if (!empty($result) && $result->num_rows > 0) {
+        $db_out = array();
+        while ($row = $result->fetch_assoc()) {
+            array_push($db_out, $row);
+        }
+        // use this person and insert them into the health worker. 
+        // Warn the user if any information changed to update the person
+        try {
+            $query = $conn->prepare(
+                'INSERT into healthcareworker (personID, SSN) values (?,?)'
+            );
+            $query->bind_param('ss', $db_out[0]['personID'], $ssn);
+            $query->execute();
+            if ($query->execute() === false) {
+                $conn->rollback();
+                return json_encode(array('response' => 'Error. Person exists or SSN already exists'));
+            }
+            return json_encode(array(
+                'response' => 'Warning', 
+                'message' => "New worker created but found existing person. Please update the person if information has changed."));
+        } catch (mysqli_sql_exception $e) {
+            $conn->rollback();
+            return json_encode(array('response' => 'Error. Failed to insert person into hwc'));
+        }
+        
+    } elseif (!empty($result) && $result->num_rows == 0) {
+        // insert a new person
+        $result = insert_Person(
+            $conn, 
+            $fname, 
+            $lname, 
+            $phone, 
+            $email, 
+            $dob, 
+            $passport, 
+            $medicare, 
+            $address, 
+            $postalcode, 
+            $country, 
+            $city
+        );
+
+        if ($result['response'] == 'Success') {
+            // get back the last insert
+            $pid = $conn->insert_id;
+
+            try {
+                $query = $conn->prepare(
+                    'INSERT into healthcareworker (personID, SSN) values (?,?)'
+                );
+                $query->bind_param('is', $pid, $ssn);
+                if ($query->execute() === false) {
+                    return json_encode(array('response' => 'Error. Failed to insert, hwc exists'));
+                }
+            } catch (mysqli_sql_exception $e) {
+                $conn->rollback();
+                return json_encode(array('response' => 'Error. Failed to insert into hwc'));
+            }
+
+            return json_encode(array('response' => 'Success'));
+        }
+        return json_encode($result);
+    }
+
+    return json_encode(array('response' => 'Error. Faield to insert'));
+     
 }
 
 function createPHFRoute($data) {
+    if (count($data) != 7)  {
+        return json_encode(array('response' => 'Error! Bad input!'));
+    }
 
-    return json_encode(array('response' => 'Hit the phf route'));
+    $loc = $data[0]->value;
+    $phone = $data[1]->value;
+    $address = $data[2]->value;
+    $postal = $data[3]->value;
+    $city = $data[4]->value;
+    $typeFacility = $data[5]->value;
+    $website = $data[6]->value;
+
+    // get the province from the postal code
+    /**
+     * TODO: not force the connection between postalcodes and provinces until
+     * the user is making a new postalcode or adding an existing one. But like Ale said, 
+     * this could be tricky since we should really have the postal codes existing from the beginning.
+     */
+    $db = new DBConnection();
+    $conn = $db->getConnection();
+
+    try {
+        $query = $conn->prepare('INSERT into phoneAddress (phone, address) values (?,?)');
+        $query->bind_param('ss', $phone, $address);
+        $rq = $query->execute();
+        if ($rq === false) {
+            $sql_query = "SELECT address from phoneaddress where phone='$phone'";
+            $result = $conn->query($sql_query);
+            if (!empty($result) && $result->num_rows > 0) {
+                $db_out = array();
+                while ($row = $result->fetch_assoc()) {
+                    array_push($db_out, $row);
+                }
+                if ($db_out[0]['address'] !== $address) {
+                    $conn->rollback();
+                    return json_encode(array('response' => 'Error. Address does not match.'));
+                }
+            } elseif (empty($result)) {
+                $conn->rollback();
+                return json_encode(array("response" => 'Fatal: Error'));
+            }
+        }
+    } catch (mysqli_sql_exception $e) {
+        $conn->rollback();
+        return json_encode(array('response' => 'Error. Failed to insert phoneaddress'));
+    }
+
+    try {
+        $query = $conn->prepare(
+            'INSERT into 
+            vaccinationFacility (locName, phone, website, typeOfFacility, city, postalCode) 
+            values (?,?,?,?,?,?,?)');
+        $query->bind_param('sssssss', $loc, $phone, $website, $typeFacility, $city, $postal);
+        $query->execute();
+
+        return json_encode(array('response' => 'Success'));
+    } catch (mysqli_sql_exception $e) {
+        $conn->rollback();
+        return json_encode(array('response' => 'Error. Failed to insert'));
+    } catch (Exception $e) {
+        $conn->rollback();
+        return json_encode(array('response' => 'Error. Unknown Error'));
+    }
+
 }
 
 function createVaxTypeRoute($data) {
@@ -154,10 +412,6 @@ function createVariant($data) {
     $sql_query = <<<SQL
         INSERT into covidvariants values ("$insertable")
         SQL;
-
-    $of2 = fopen('post_output.txt','a' );
-    fwrite($of2, $sql_query . "\n");
-    fclose($of2);
     return json_encode(perform_insertion($sql_query));
 }
 

@@ -34,6 +34,11 @@ function get_data($entity) {
                 SELECT countryName FROM country c
             SQL;
             return query_data($sql_query, $entity);
+        case 'PostalCode':
+            $sql_query = <<<'SQL'
+                SELECT postalCode FROM postalcode
+            SQL;
+            return query_data($sql_query, $entity);
         default: 
             return returnJSONError();
     }

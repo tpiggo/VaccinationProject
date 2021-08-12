@@ -46,11 +46,6 @@ module.exports = {
         },
         {
             name: "Postal Code",
-            type: 'text',
-            max: 225
-        },
-        {
-            name: "Province",
             type: 'select'
         },
         {
@@ -123,11 +118,6 @@ module.exports = {
         },
         {
             name: "Postal Code",
-            type: 'text',
-            max: 225
-        },
-        {
-            name: "Province",
             type: 'select'
         },
         {
@@ -152,17 +142,12 @@ module.exports = {
         },
         {
             name: "Postal Code",
-            type: 'text',
-            max: 225
+            type: 'select'
         },
         {
             name: "City",
             type: 'text',
             max: 225
-        },
-        {
-            name: "Province",
-            type: 'select'
         },
         {
             name: "Type Of Facility",
