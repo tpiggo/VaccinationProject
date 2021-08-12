@@ -25,7 +25,7 @@ export default class MultipleInputs extends React.Component{
         newEl.push(<FontAwesomeIcon key={'add' + this.state.key} onClick={() => this.addNewMultiple()} icon={faPlusCircle}/>)
         let multElement = this.state.multElement;
         multElement.push(newEl);
-        this.setState({multElement: multElement, key: this.state.key++});
+        this.setState({multElement: multElement, key: this.state.key+1});
     }
     render() {
         return (

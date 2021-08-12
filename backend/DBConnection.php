@@ -6,7 +6,7 @@ class DBConnection {
     private $servername = "localhost"; 
     private $username = "root";
     private $password = "";
-    private $dbname = "hso";
+    private $dbname = "c19vs";
 
     public function __construct() {
         $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
@@ -25,5 +25,15 @@ class DBConnection {
 
     public function getInfo()  {
         return $this->servername . ", " . $this->dbname;
+    }
+
+    // May need but leave it alone for now, return the connection
+    public function safeInsert($sql_query, $input) {
+        $query = $this->conn->prepare($sql_query);
+        $query->bind_param('s', $input);
+    }
+
+    public function getConnection() {
+        return $this->conn;
     }
 }

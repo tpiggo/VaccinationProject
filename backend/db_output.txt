@@ -21,4 +21,350 @@
 2021-08-11 03:23:04am: Connection instance created! 
 2021-08-11 03:23:28am: Connection has been opened to localhost, hso! 
 2021-08-11 03:23:28am: Connection instance created! 
-2021-08-11 03:36:23am: Connection has been opened to localhost, hso! 
+2021-08-11 03:36:23am: Connection has been opened to localhost, hso! 2021-08-11 08:50:11pm: Getting the data from Province 
+2021-08-11 08:50:11pm: Getting the data from CountryName 
+2021-08-11 08:51:04pm: Getting the data from Province 
+2021-08-11 08:51:05pm: Getting the data from CountryName 
+2021-08-11 08:51:20pm: Getting the data from Province 
+2021-08-11 08:51:21pm: Getting the data from CountryName 
+2021-08-11 08:54:49pm: Getting the data from Province 
+e 
+2021-08-11 08:54:49pm: Getting the data from infection 
+2021-08-11 09:03:31pm: Getting the data from infection 
+2021-08-11 09:03:31pm: Getting the data from Province 
+2021-08-11 09:03:31pm: Getting the data from CountryName 
+2021-08-11 09:03:32pm: Getting the data from Province 
+2021-08-11 09:04:45pm: Getting the data from infection 
+2021-08-11 09:04:45pm: Getting the data from CountryName 
+2021-08-11 09:04:48pm: Getting the data from Province 
+2021-08-11 09:04:48pm: Getting the data from CountryName 
+2021-08-11 09:06:10pm: Getting the data from CountryName 
+2021-08-11 09:06:12pm: Getting the data from Province 
+e 
+2021-08-11 09:09:31pm: Getting the data from Province 
+e 
+2021-08-11 09:09:51pm: Getting the data from Province 
+2021-08-11 09:09:52pm: Getting the data from CountryName 
+2021-08-11 09:09:52pm: Getting the data from infection 
+2021-08-11 09:19:07pm: Getting the data from Province 
+e 
+2021-08-11 09:19:07pm: Getting the data from infection 
+2021-08-11 09:25:18pm: Getting the data from Province 
+2021-08-11 09:25:18pm: Getting the data from CountryName 
+2021-08-11 09:25:18pm: Getting the data from infection 
+2021-08-11 09:26:27pm: Getting the data from Province 
+2021-08-11 09:26:28pm: Getting the data from infection 
+ 
+2021-08-11 09:27:12pm: Getting the data from Province 
+e 
+2021-08-11 09:27:13pm: Getting the data from infection 
+2021-08-11 09:27:50pm: Getting the data from CountryName 
+2021-08-11 09:27:50pm: Getting the data from infection 
+2021-08-11 09:28:53pm: Getting the data from Province 
+2021-08-11 09:28:53pm: Getting the data from CountryName 
+2021-08-11 09:28:53pm: Getting the data from infection 
+2021-08-11 09:29:16pm: Getting the data from infection 
+2021-08-11 09:29:16pm: Getting the data from CountryName 
+2021-08-11 09:30:11pm: Getting the data from CountryName2021-08-11 09:30:11pm: Getting the data from Province 
+2021-08-11 09:30:49pm: Getting the data from Province 
+2021-08-11 09:30:49pm: Getting the data from CountryName 
+2021-08-11 09:30:49pm: Getting the data from infection 
+2021-08-11 09:31:00pm: Getting the data from infection 
+ 
+2021-08-11 09:31:38pm: Getting the data from CountryName 
+2021-08-11 09:31:38pm: Getting the data from Province 
+2021-08-11 09:31:38pm: Getting the data from infection 
+2021-08-11 09:32:27pm: Getting the data from CountryName 
+2021-08-11 09:32:27pm: Getting the data from infection 
+2021-08-11 09:36:00pm: Getting the data from CountryName 
+2021-08-11 09:36:00pm: Getting the data from infection 
+2021-08-11 09:36:06pm: Getting the data from Province 
+2021-08-11 09:36:06pm: Getting the data from CountryName 
+2021-08-11 09:36:06pm: Getting the data from infection 
+2021-08-11 09:36:48pm: Getting the data from Province 
+2021-08-11 09:36:48pm: Getting the data from CountryName 
+2021-08-11 09:36:48pm: Getting the data from infection 
+2021-08-11 09:37:58pm: Getting the data from infection 
+2021-08-11 09:37:58pm: Getting the data from Province 
+e 
+2021-08-11 09:39:39pm: Getting the data from Province 
+2021-08-11 09:39:39pm: Getting the data from CountryName 
+2021-08-11 09:39:46pm: Getting the data from CountryName 
+2021-08-11 09:39:46pm: Getting the data from Province 
+2021-08-11 09:39:46pm: Getting the data from infection 
+2021-08-11 10:56:41pm: Getting the data from infection 
+2021-08-11 10:56:41pm: Getting the data from CountryName 
+2021-08-11 10:59:06pm: Getting the data from Province 
+2021-08-11 10:59:06pm: Getting the data from infection 
+2021-08-11 10:59:06pm: Getting the data from CountryName 
+2021-08-11 11:00:28pm: Getting the data from Province 
+2021-08-11 11:01:44pm: Getting the data from CountryName 
+2021-08-11 11:01:44pm: Getting the data from Province 
+2021-08-11 11:01:44pm: Getting the data from infection 
+2021-08-11 11:05:09pm: Getting the data from Province 
+2021-08-11 11:05:09pm: Getting the data from infection 
+2021-08-11 11:05:09pm: Getting the data from CountryName 
+2021-08-11 11:39:07pm: Getting the data from infection 
+ 
+2021-08-11 11:48:36pm: Getting the data from Province 
+2021-08-11 11:48:36pm: Getting the data from CountryName 
+2021-08-11 11:48:36pm: Getting the data from infection 
+2021-08-11 11:49:02pm: Getting the data from CountryName 
+2021-08-11 11:49:02pm: Getting the data from Province 
+2021-08-11 11:49:02pm: Getting the data from infection 
+2021-08-11 11:49:20pm: Getting the data from Province 
+e 
+2021-08-11 11:49:24pm: Getting the data from Province 
+2021-08-11 11:49:24pm: Getting the data from infection 
+2021-08-11 11:49:24pm: Getting the data from CountryName 
+2021-08-11 11:50:14pm: Getting the data from CountryName 
+2021-08-11 11:50:14pm: Getting the data from infection 
+2021-08-11 11:50:41pm: Getting the data from CountryName 
+2021-08-11 11:50:41pm: Getting the data from infection 
+2021-08-11 11:50:41pm: Getting the data from Province 
+2021-08-11 11:50:57pm: Getting the data from Province 
+2021-08-11 11:50:57pm: Getting the data from CountryName 
+2021-08-11 11:50:57pm: Getting the data from infection 
+2021-08-11 11:58:06pm: Getting the data from infection 
+2021-08-11 11:58:06pm: Getting the data from CountryName 
+2021-08-12 12:00:30am: Getting the data from Province 
+2021-08-12 12:00:30am: Getting the data from infection 
+2021-08-12 12:00:30am: Getting the data from CountryName 
+2021-08-12 12:02:27am: Getting the data from CountryName 
+2021-08-12 12:02:28am: Getting the data from infection 
+2021-08-12 12:02:43am: Getting the data from infection 
+2021-08-12 12:02:43am: Getting the data from Province 
+e 
+2021-08-12 12:03:55am: Getting the data from CountryName 
+2021-08-12 12:03:55am: Getting the data from Province 
+2021-08-12 12:03:55am: Getting the data from infection 
+2021-08-12 12:06:04am: Getting the data from Province 
+2021-08-12 12:06:04am: Getting the data from CountryName 
+2021-08-12 12:06:04am: Getting the data from infection 
+2021-08-12 12:13:57am: Getting the data from infection 
+ 
+2021-08-12 12:14:17am: Getting the data from Province 
+2021-08-12 12:14:17am: Getting the data from CountryName 
+2021-08-12 12:14:33am: Getting the data from Province 
+2021-08-12 12:14:33am: Getting the data from CountryName 
+2021-08-12 12:14:33am: Getting the data from infection 
+2021-08-12 12:15:03am: Getting the data from CountryName2021-08-12 12:15:03am: Getting the data from Province 
+2021-08-12 12:15:49am: Getting the data from Province 
+
+ 
+2021-08-12 12:17:26am: Getting the data from infection 
+2021-08-12 12:17:26am: Getting the data from CountryName 
+2021-08-12 12:17:26am: Getting the data from Province 
+2021-08-12 12:18:02am: Getting the data from Province 
+2021-08-12 12:18:02am: Getting the data from infection 
+2021-08-12 12:18:02am: Getting the data from CountryName 
+2021-08-12 12:20:06am: Getting the data from Province 
+2021-08-12 12:20:06am: Getting the data from infection 
+ 
+2021-08-12 12:21:56am: Getting the data from Province 
+e 
+2021-08-12 12:21:56am: Getting the data from infection 
+2021-08-12 12:22:05am: Getting the data from Province 
+2021-08-12 12:22:05am: Getting the data from infection 
+2021-08-12 12:22:05am: Getting the data from CountryName 
+2021-08-12 12:23:51am: Getting the data from infection 
+ 
+2021-08-12 12:31:10am: Getting the data from Province 
+2021-08-12 12:31:10am: Getting the data from infection 
+2021-08-12 12:31:10am: Getting the data from CountryName 
+2021-08-12 12:32:12am: Getting the data from Province 
+2021-08-12 12:32:12am: Getting the data from CountryName 
+2021-08-12 12:32:12am: Getting the data from infection 
+2021-08-12 12:32:17am: Getting the data from Province 
+
+ 
+2021-08-12 12:34:14am: Getting the data from Province 
+2021-08-12 12:34:14am: Getting the data from CountryName 
+2021-08-12 12:34:14am: Getting the data from infection 
+2021-08-12 12:34:38am: Getting the data from infection 
+2021-08-12 12:34:38am: Getting the data from CountryName 
+2021-08-12 12:34:38am: Getting the data from Province 
+2021-08-12 12:35:39am: Getting the data from Province 
+2021-08-12 12:35:39am: Getting the data from infection 
+2021-08-12 12:35:39am: Getting the data from CountryName 
+2021-08-12 12:35:58am: Getting the data from Province 
+2021-08-12 12:35:58am: Getting the data from CountryName 
+2021-08-12 12:35:58am: Getting the data from infection 
+2021-08-12 12:36:02am: Getting the data from Province 
+2021-08-12 12:36:02am: Getting the data from CountryName 
+2021-08-12 12:36:02am: Getting the data from infection 
+2021-08-12 12:37:17am: Getting the data from Province 
+2021-08-12 12:37:17am: Getting the data from infection 
+2021-08-12 12:37:17am: Getting the data from CountryName 
+2021-08-12 12:37:28am: Getting the data from infection 
+2021-08-12 12:37:28am: Getting the data from CountryName 
+2021-08-12 12:37:28am: Getting the data from Province 
+2021-08-12 12:38:50am: Getting the data from infection 
+2021-08-12 12:38:50am: Getting the data from CountryName 
+2021-08-12 12:38:57am: Getting the data from Province 
+2021-08-12 12:38:57am: Getting the data from infection 
+2021-08-12 12:38:57am: Getting the data from CountryName 
+2021-08-12 12:39:15am: Getting the data from CountryName 
+2021-08-12 12:39:15am: Getting the data from Province 
+
+2021-08-12 12:40:30am: Getting the data from CountryName 
+2021-08-12 12:40:30am: Getting the data from Province 
+
+2021-08-12 12:40:48am: Getting the data from Province 
+2021-08-12 12:40:48am: Getting the data from CountryName 
+2021-08-12 12:40:48am: Getting the data from infection 
+2021-08-12 12:41:40am: Getting the data from CountryName 
+2021-08-12 12:41:40am: Getting the data from Province 
+
+2021-08-12 12:42:00am: Getting the data from CountryName 
+2021-08-12 12:42:00am: Getting the data from Province 
+2021-08-12 12:42:00am: Getting the data from infection 
+2021-08-12 12:43:00am: Getting the data from Province 
+2021-08-12 12:43:00am: Getting the data from CountryName 
+2021-08-12 12:43:00am: Getting the data from infection 
+2021-08-12 12:43:27am: Getting the data from Province 
+2021-08-12 12:43:27am: Getting the data from infection 
+ 
+2021-08-12 12:46:46am: Getting the data from Province 
+2021-08-12 12:46:46am: Getting the data from CountryName 
+2021-08-12 12:46:46am: Getting the data from infection 
+2021-08-12 12:47:06am: Getting the data from Province 
+e 
+2021-08-12 12:49:47am: Getting the data from CountryName 
+2021-08-12 12:49:47am: Getting the data from Province 
+2021-08-12 12:49:47am: Getting the data from infection 
+2021-08-12 12:50:45am: Getting the data from infection 
+2021-08-12 12:50:45am: Getting the data from CountryName 
+2021-08-12 12:50:58am: Getting the data from CountryName 
+2021-08-12 12:50:58am: Getting the data from Province 
+2021-08-12 12:50:58am: Getting the data from infection 
+2021-08-12 12:52:24am: Getting the data from Province 
+e 
+2021-08-12 12:52:24am: Getting the data from infection 
+2021-08-12 12:56:26am: Getting the data from Province 
+2021-08-12 12:56:26am: Getting the data from infection 
+2021-08-12 12:56:26am: Getting the data from CountryName 
+2021-08-12 12:57:30am: Getting the data from infection 
+ 
+2021-08-12 12:58:04am: Getting the data from infection 
+2021-08-12 12:58:04am: Getting the data from CountryName 
+2021-08-12 12:58:04am: Getting the data from Province 
+2021-08-12 12:59:34am: Getting the data from Province 
+2021-08-12 12:59:34am: Getting the data from CountryName 
+2021-08-12 12:59:34am: Getting the data from infection 
+2021-08-12 01:00:28am: Getting the data from infection 
+2021-08-12 01:00:28am: Getting the data from Province 
+e 
+2021-08-12 01:01:49am: Getting the data from Province 
+2021-08-12 01:01:49am: Getting the data from CountryName 
+2021-08-12 01:02:38am: Getting the data from CountryName 
+2021-08-12 01:02:38am: Getting the data from infection 
+2021-08-12 01:04:11am: Getting the data from Province 
+2021-08-12 01:04:11am: Getting the data from CountryName 
+2021-08-12 01:04:11am: Getting the data from infection 
+2021-08-12 01:04:29am: Getting the data from Province 
+e 
+2021-08-12 01:05:50am: Getting the data from CountryName 
+2021-08-12 01:07:24am: Getting the data from Province 
+2021-08-12 01:07:24am: Getting the data from CountryName 
+2021-08-12 01:07:24am: Getting the data from infection 
+2021-08-12 01:07:33am: Getting the data from Province 
+2021-08-12 01:07:33am: Getting the data from CountryName 
+2021-08-12 01:07:33am: Getting the data from infection 
+2021-08-12 01:08:15am: Getting the data from infection 
+2021-08-12 01:08:15am: Getting the data from CountryName 
+2021-08-12 01:08:42am: Getting the data from CountryName 
+2021-08-12 01:08:42am: Getting the data from Province 
+2021-08-12 01:08:42am: Getting the data from infection 
+2021-08-12 01:08:49am: Getting the data from Province 
+2021-08-12 01:08:49am: Getting the data from CountryName 
+2021-08-12 01:08:49am: Getting the data from infection 
+2021-08-12 01:13:49am: Getting the data from infection 
+2021-08-12 01:13:49am: Getting the data from Province 
+2021-08-12 01:13:49am: Getting the data from CountryName 
+2021-08-12 01:14:12am: Getting the data from Province 
+2021-08-12 01:14:12am: Getting the data from infection 
+2021-08-12 01:14:12am: Getting the data from CountryName 
+2021-08-12 01:14:50am: Getting the data from Province 
+2021-08-12 01:14:50am: Getting the data from infection 
+ 
+2021-08-12 01:15:09am: Getting the data from Province 
+2021-08-12 01:15:09am: Getting the data from CountryName 
+2021-08-12 01:15:09am: Getting the data from infection 
+2021-08-12 01:15:18am: Getting the data from Province 
+2021-08-12 01:15:18am: Getting the data from infection 
+2021-08-12 01:15:18am: Getting the data from CountryName 
+2021-08-12 01:15:42am: Getting the data from Province 
+2021-08-12 01:15:42am: Getting the data from CountryName 
+2021-08-12 01:15:42am: Getting the data from infection 
+2021-08-12 01:16:04am: Getting the data from Province 
+2021-08-12 01:16:04am: Getting the data from CountryName 
+2021-08-12 01:16:04am: Getting the data from infection 
+2021-08-12 01:16:22am: Getting the data from Province 
+2021-08-12 01:16:22am: Getting the data from CountryName 
+2021-08-12 01:16:33am: Getting the data from Province 
+2021-08-12 01:16:33am: Getting the data from CountryName 
+2021-08-12 01:16:33am: Getting the data from infection 
+2021-08-12 01:17:01am: Getting the data from Province 
+2021-08-12 01:17:01am: Getting the data from infection 
+2021-08-12 01:17:01am: Getting the data from CountryName 
+2021-08-12 01:17:46am: Getting the data from infection 
+2021-08-12 01:17:46am: Getting the data from CountryName 
+2021-08-12 01:18:12am: Getting the data from Province 
+2021-08-12 01:18:12am: Getting the data from CountryName 
+2021-08-12 01:18:12am: Getting the data from infection 
+2021-08-12 01:18:35am: Getting the data from Province 
+2021-08-12 01:18:35am: Getting the data from infection 
+2021-08-12 01:18:35am: Getting the data from CountryName 
+2021-08-12 01:19:16am: Getting the data from infection 
+2021-08-12 01:19:16am: Getting the data from Province 
+e 
+2021-08-12 01:19:37am: Getting the data from infection 
+2021-08-12 01:19:37am: Getting the data from CountryName 
+2021-08-12 01:20:20am: Getting the data from Province 
+e 
+2021-08-12 01:20:24am: Getting the data from Province 
+2021-08-12 01:20:24am: Getting the data from CountryName 
+2021-08-12 01:20:24am: Getting the data from infection 
+2021-08-12 01:21:20am: Getting the data from CountryName 
+2021-08-12 01:21:20am: Getting the data from infection 
+2021-08-12 01:21:20am: Getting the data from Province 
+2021-08-12 01:21:59am: Getting the data from infection 
+2021-08-12 01:21:59am: Getting the data from Province 
+e 
+2021-08-12 01:30:26am: Getting the data from Province 
+2021-08-12 01:30:26am: Getting the data from CountryName 
+2021-08-12 01:30:35am: Getting the data from Province 
+2021-08-12 01:31:27am: Getting the data from Province 
+2021-08-12 01:31:27am: Getting the data from infection 
+2021-08-12 01:31:27am: Getting the data from CountryName 
+2021-08-12 01:50:09am: Getting the data from CountryName 
+2021-08-12 01:57:06am: Getting the data from Province 
+2021-08-12 01:57:06am: Getting the data from infection 
+2021-08-12 01:57:06am: Getting the data from CountryName 
+2021-08-12 02:05:22am: Getting the data from Province 
+2021-08-12 02:05:22am: Getting the data from CountryName 
+2021-08-12 02:20:58am: Getting the data from Province 
+2021-08-12 02:20:58am: Getting the data from CountryName 
+2021-08-12 02:20:58am: Getting the data from infection 
+2021-08-12 02:26:13am: Getting the data from Province 
+2021-08-12 02:26:13am: Getting the data from CountryName 
+2021-08-12 02:26:13am: Getting the data from infection 
+2021-08-12 02:29:37am: Getting the data from CountryName 
+2021-08-12 02:29:37am: Getting the data from Province 
+2021-08-12 02:29:37am: Getting the data from infection 
+2021-08-12 02:55:01am: Getting the data from Province 
+2021-08-12 02:55:01am: Getting the data from CountryName 
+2021-08-12 02:55:01am: Getting the data from infection 
+2021-08-12 03:12:14am: Getting the data from CountryName 
+2021-08-12 03:13:30am: Getting the data from Province 
+e 
+2021-08-12 03:13:30am: Getting the data from infection 
+2021-08-12 03:13:55am: Getting the data from CountryName 
+2021-08-12 03:21:44am: Getting the data from Province 
+2021-08-12 03:42:39am: Getting the data from Province 
+2021-08-12 03:42:39am: Getting the data from CountryName 
+2021-08-12 03:42:39am: Getting the data from infection 
+2021-08-12 03:42:43am: Getting the data from CountryName 
+2021-08-12 05:37:53am: Getting the data from Province 
+2021-08-12 05:37:53am: Getting the data from CountryName 

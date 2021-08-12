@@ -51,11 +51,11 @@ module.exports = {
         },
         {
             name: "Province",
-            type: 'dropdown'
+            type: 'select'
         },
         {
             name: "Country Name",
-            type: 'dropdown'
+            type: 'select'
         },
         {
             name: 'infection',
@@ -67,7 +67,7 @@ module.exports = {
                 },
                 {
                     name: "Type Of Infection",
-                    type: 'dropdown'
+                    type: 'select'
                 }
             ]
         }
@@ -162,7 +162,7 @@ module.exports = {
         },
         {
             name: "Province",
-            type: 'dropdown'
+            type: 'select'
         },
         {
             name: "Type Of Facility",
@@ -182,23 +182,19 @@ module.exports = {
             max: 225
         },
         {
-            name: 'Vaccine Status',
-            choices: [
-                'Approved',
-                'Suspended'
-            ]
-        },
-        {
             name: 'dates',
             multiple: true,
             subcat: [
                 {
-                    name: 'Date of Approval',
+                    name: 'Date of Status Change',
                     type: 'date'
                 },
                 {
-                    name: "Date of Suspension",
-                    type: 'date'
+                    name: 'Vaccine Status',
+                    choices: [
+                        'Approved',
+                        'Suspended'
+                    ]
                 }
             ]
         }

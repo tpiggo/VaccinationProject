@@ -4,7 +4,8 @@ const selectables = [
     'Public Health Facility',
     'Vaccination Type',
     'Covid-19 Infection Variant Type',
-    'Group Age'
+    'Group Age',
+    'Province'
 ];
 
 module.exports = { selectables: selectables };
