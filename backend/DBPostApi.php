@@ -105,10 +105,8 @@ function createVaxTypeRoute($data) {
 
         // Add all the statuses
         for($i = 0; $i <  count($statuses); $i++) {
-            $date = $statuses[$i]['change'];
-            $stat = $statuses[$i]['status'];
             $rel_query = $conn->prepare('INSERT into vaccinestatushistory (vaccineType, dateOfStatusChange, vaxStatus) values (?,?,?)');
-            $rel_query->bind_param('sss', $name, $date, $stat);
+            $rel_query->bind_param('sss', $name, $statuses[$i]['change'], $statuses[$i]['status']);
             $rel_query->execute();
         }
 
@@ -116,6 +114,9 @@ function createVaxTypeRoute($data) {
     } catch (mysqli_sql_exception $e) {
         $conn->rollback();
         return json_encode(array('response' => 'Error. Failed to insert'));
+    } catch (Exception $e) {
+        $conn->rollback();
+        return json_encode(array('response' => 'Error. Unknown Error'));
     }
 }
 

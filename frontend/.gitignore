@@ -21,6 +21,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-/backend/db_output.txt
-/backend/post_output.txt

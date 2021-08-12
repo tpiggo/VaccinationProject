@@ -1,3 +1,0 @@
----Start---- 
-data. [{"name":"Type","value":"covidva6"},{"name":"DateofStatusChange","value":"2021-01-01"},{"name":"VaccineStatus","value":"approved"},{"name":"DateofStatusChange","value":"2021-02-01"},{"name":"VaccineStatus","value":"suspended"}]
-type. vaccinationType
