@@ -284,22 +284,17 @@ function query_data($sql_query, $entity) {
     try {
         $conn = new DBConnection();
         $result = $conn->query($sql_query); 
-        $of = fopen('db_output.txt', 'a');
-        fwrite($of, $sql_query . " \n ");
         if (!empty($result) && $result->num_rows > 0) {
             $to_ret = array();
             while ($row = $result->fetch_assoc()) {
                 array_push($to_ret, $row);
             }
             $output = json_encode(array('response' => array('data' => $to_ret, 'name' => $entity)));
-            fwrite($of, $output . "\n");
         } else {
             $output = json_encode(array('response' => 'None found!'));
         }
     } catch (\Exception $e) {
         $output = json_encode(array('response' => 'Error!'));
-    } finally {
-        fclose($of);
     }
 
     return $output;

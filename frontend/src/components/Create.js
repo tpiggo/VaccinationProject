@@ -131,7 +131,7 @@ function onSubmitForm(event, type){
     console.log('Submitted but stopped');
     let inputValues = []
     let child = document.getElementById('inputForm').firstElementChild;
-    while (child !== undefined || child !== null) {
+    while (child !== undefined && child !== null) {
         if (child.className.includes('Create__InputWrapper')) {
             inputValues.push(removeInputInformation(child))
     
