@@ -1,8 +1,8 @@
 // need better names
 
 module.exports = {
-    getRequest: (entity, type) => {
-        let url = `/backend/DBGetApi.php?type=${type}&entity=${entity}`;
+    getRequest: (entity, type, notEntity) => {
+        let url = notEntity!==undefined?`/backend/DBGetApi.php?type=${type}&${notEntity}=${entity}`:`/backend/DBGetApi.php?type=${type}&entity=${entity}`;
         // returns the promise with the JSON data within the next then
         return fetch(url,  {
             headers : { 

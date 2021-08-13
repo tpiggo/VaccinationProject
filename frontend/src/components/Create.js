@@ -110,14 +110,14 @@ function onSubmitForm(event, type){
     function removeInputInformation(child) {
         let inputValue;
         let input = child.getElementsByTagName('input');
-        if (input.length != 0){
+        if (input.length !== 0){
             inputValue = {
                 name: input[0].getAttribute('name'),
                 value: input[0].value
             };
         } else {
             let select = child.getElementsByTagName('select');
-            if (select.length != 0) {
+            if (select.length !== 0) {
                 inputValue = {
                     name: select[0].getAttribute('name'),
                     value: select[0].value
@@ -131,7 +131,7 @@ function onSubmitForm(event, type){
     console.log('Submitted but stopped');
     let inputValues = []
     let child = document.getElementById('inputForm').firstElementChild;
-    while (child != undefined || child != null) {
+    while (child !== undefined || child !== null) {
         if (child.className.includes('Create__InputWrapper')) {
             inputValues.push(removeInputInformation(child))
     
@@ -140,7 +140,7 @@ function onSubmitForm(event, type){
             let children = [...child.children];
             children.forEach(itemChild => {
                 console.log(itemChild)
-                if (itemChild.tagName != 'svg' && itemChild.className.includes('Create__InputWrapper')){
+                if (itemChild.tagName !== 'svg' && itemChild.className.includes('Create__InputWrapper')){
                     console.log('extracting data')
                     inputValues.push(removeInputInformation(itemChild))
                 }
@@ -183,14 +183,17 @@ class Create extends React.Component{
                 <option key={"createOption" + keyInt++} value={value}>{item}</option>
             )
         });
-        return (<div>
-            <label>Choose a category: </label>
-            <select onChange={this.createTableFromSelect}>
-                <option value="invalid">Select</option>
-                {selects}
-            </select>
-            <div id="create-box">{this.state.createbox}</div>
-        </div>);
+        return (
+            <div key={'main-div-create'}>
+                <h1>Create</h1>
+                <label>Choose a category: </label>
+                <select onChange={this.createTableFromSelect}>
+                    <option value="invalid">Select</option>
+                    {selects}
+                </select>
+                <div id="create-box">{this.state.createbox}</div>
+            </div>
+        );
     }
 }
 

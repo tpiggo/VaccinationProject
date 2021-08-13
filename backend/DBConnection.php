@@ -3,10 +3,10 @@
 class DBConnection {
     private $conn;
     // Need to change this based on the db we are using.
-    private $servername = "localhost"; 
-    private $username = "root";
-    private $password = "";
-    private $dbname = "c19vs";
+    private $servername = "hkc353.encs.concordia.ca:3306"; 
+    private $username = "hkc353_1";
+    private $password = "ttjdbms";
+    private $dbname = "hkc353_1";
 
     public function __construct() {
         $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);

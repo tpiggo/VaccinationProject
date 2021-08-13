@@ -80,8 +80,8 @@ module.exports = {
         },
         {
             name: "SSN",
-            type: 'number',
-            max: 225
+            type: 'text',
+            max: 255
         },
         {
             name: "Email",

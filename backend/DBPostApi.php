@@ -6,15 +6,9 @@ include('DBConnection.php');
  * Entry point here:
  */
 
-
-// $log_file_name = "db_output.txt";
-// $of = fopen($log_file_name, 'a');
-$of2 = fopen('post_output.txt','a' );
-fwrite($of2, "---Start---- \n");
 $json = file_get_contents('php://input');
 $json_obj = json_decode($json);
-fwrite($of2, "data. " . json_encode($json_obj->data) . "\n");
-fwrite($of2, "type. " . $json_obj->type . "\n");
+
 
 
 switch($json_obj->type) {
@@ -44,11 +38,9 @@ switch($json_obj->type) {
         break;
 }
 
-fclose($of2);
-
 function insert_Person($conn, $fname, $lname, $phone, $email, $dob, $passport, $medicare, $address, $postalcode, $country, $city) {
     try {
-        $query = $conn->prepare('INSERT into phoneAddress (phone, address) values (?,?)');
+        $query = $conn->prepare('INSERT into phoneaddress (phone, address) values (?,?)');
         $query->bind_param('ss', $phone, $address);
         $rq = $query->execute();
         if ($rq === false) {
@@ -134,7 +126,7 @@ function createPersonRoute($data) {
         for ($x = 11; $x < count($data); $x+=2) {
             try {
                 $query = $conn->prepare(
-                    "INSERT INTO infectionRecords (personID, infecteddate, typInfection) values (?,?,?)"
+                    "INSERT INTO infectionrecords (personID, infecteddate, typInfection) values (?,?,?)"
                 );
                 // Must have created "Unknown" in CovidInfections or else this will fail.
                 $type = $data[$x+1]->value!==''?$data[$x+1]->value:'Unknown';
@@ -183,11 +175,7 @@ function createPHWRoute($data) {
     $db = new DBConnection();
     $conn = $db->getConnection();
 
-    $result = $conn->query("SELECT * from Person where medicarenumber='$medicare'");
-    $of = fopen("db_output.txt", 'a');
-    fwrite($of, "was empty?" . empty($result) . " true  = 1 \n" );
-    fwrite($of, "was empty?" . json_encode($result) . " true  = 1 \n" );
-    fclose($of);
+    $result = $conn->query("SELECT * from person where medicarenumber='$medicare'");
     if (!empty($result) && $result->num_rows > 0) {
         $db_out = array();
         while ($row = $result->fetch_assoc()) {
@@ -200,7 +188,6 @@ function createPHWRoute($data) {
                 'INSERT into healthcareworker (personID, SSN) values (?,?)'
             );
             $query->bind_param('ss', $db_out[0]['personID'], $ssn);
-            $query->execute();
             if ($query->execute() === false) {
                 $conn->rollback();
                 return json_encode(array('response' => 'Error. Person exists or SSN already exists'));
@@ -279,7 +266,7 @@ function createPHFRoute($data) {
     $conn = $db->getConnection();
 
     try {
-        $query = $conn->prepare('INSERT into phoneAddress (phone, address) values (?,?)');
+        $query = $conn->prepare('INSERT into phoneaddress (phone, address) values (?,?)');
         $query->bind_param('ss', $phone, $address);
         $rq = $query->execute();
         if ($rq === false) {
@@ -307,7 +294,7 @@ function createPHFRoute($data) {
     try {
         $query = $conn->prepare(
             'INSERT into 
-            vaccinationFacility (locName, phone, website, typeOfFacility, city, postalCode) 
+            vaccinationfacility (locName, phone, website, typeOfFacility, city, postalCode) 
             values (?,?,?,?,?,?,?)');
         $query->bind_param('sssssss', $loc, $phone, $website, $typeFacility, $city, $postal);
         $query->execute();
@@ -386,7 +373,7 @@ function createGroupAgeRoute($data) {
     $bottom  = $data[1]->value;
     $top = $data[2]->value;
     $sql_query = <<<SQL
-        INSERT into Group_Age values ($group, $bottom , $top)
+        INSERT into group_age values ($group, $bottom , $top)
     SQL;    
     return json_encode(perform_insertion($sql_query));
 }
@@ -398,7 +385,7 @@ function createProvince($data) {
     $insertable = $data[0]->value;
 
     $sql_query = <<<SQL
-        INSERT into Province (province) values ("$insertable")
+        INSERT into province (province) values ("$insertable")
         SQL;
     return json_encode(perform_insertion($sql_query));
 }

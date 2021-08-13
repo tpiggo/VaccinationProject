@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import Header from "./components/Header";
 import Create from "./components/Create";
 import Home from "./components/Home";
-import PreloadedQueries from "./components/PreloadedQueries";
+import Questions from "./components/Questions";
 import Display from "./components/Display";
 import Delete from "./components/Delete";
 import Edit from "./components/Edit";
@@ -40,9 +40,9 @@ class App extends React.Component {
 				component: Delete
 			},
 			{
-				link: "/preloaded-queries",
-				name: "Preloaded Queries",
-				component: PreloadedQueries
+				link: "/questions",
+				name: "Questions",
+				component: Questions
 			}
 		]
 	}
