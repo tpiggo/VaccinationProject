@@ -222,25 +222,24 @@ function get_question($question) {
                     trnIn.cnt as 'Number of Transfers In', trnIn.amnt as 'Amount Transferred In',
                     vaxInv.vaxType as 'Vaccine Type', vaxInv.vaxAmnt as 'Inventory Count',
                     cntVaxed.cnt as 'Number of Vaccinations Administered'
-
                 from vaccinationfacility vaxFac 
-                    join phoneaddress phnAddr
+                    left join phoneaddress phnAddr
                         on phnAddr.phone = vaxFac.phone
-                    join employeeworkrecord emplrec
+                    left join employeeworkrecord emplrec
                         on emplrec.locID = vaxFac.locID
-                    join vaxInv 
+                    left join vaxInv 
                         on vaxInv.locID = vaxFac.locID
-                    join numEmply
+                    left join numEmply
                         on numEmply.locID = vaxFac.locID
-                    join numShip 
+                    left join numShip 
                         on numShip.locID = vaxFac.locID
-                    join numTrnsfrIn trnIn
+                    left join numTrnsfrIn trnIn
                         on trnIn.locID = vaxFac.locID
-                    join numTrnsfrOut trnOut
+                    left join numTrnsfrOut trnOut
                         on trnOut.locID = vaxFac.locID
-                    join cntVaxed
+                    left join cntVaxed
                         on cntVaxed.locID = vaxFac.locID
-                where vaxFac.city = 'Montreal'
+                where vaxFac.city = 'montreal'
                 SQL;
             return query_data($sql_query, $question);
         case 'Q19':
