@@ -14,6 +14,7 @@ class Questions extends React.Component{
             questionBox: undefined
         }
     }
+
     queryDataFromSelect = (item) => {
         API.getRequest(item, 'get_question', 'question')
             .then(res=>createTableFromData(res))
@@ -34,14 +35,11 @@ class Questions extends React.Component{
 
     render() {
         let keyInt = 0;
-        let btns = QuestionsConstant.questions.map((item) => {
-            return (
-                <Button key={"qbtn" + keyInt++} onClick={() => this.queryDataFromSelect(item.name)}>
-                    {item.name}
-                </Button>
-            )
-        });
-        console.log(btns);
+        let btns = QuestionsConstant.questions.map((item) => (
+            <Button key={"qbtn" + keyInt++} onClick={() => this.queryDataFromSelect(item.name)}>
+                {item.name}
+            </Button>
+        ));
         return (
             <div key={'main-div-questions'}>
                 <h1>Questions</h1>

@@ -191,7 +191,9 @@ class Create extends React.Component{
                     <option value="invalid">Select</option>
                     {selects}
                 </select>
-                <div id="create-box">{this.state.createbox}</div>
+                <div id="create-box">
+                    {this.state.createbox}
+                </div>
             </div>
         );
     }

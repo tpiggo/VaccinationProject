@@ -7,6 +7,7 @@ import Questions from "./components/Questions";
 import Display from "./components/Display";
 import Delete from "./components/Delete";
 import Edit from "./components/Edit";
+import NewAgeGroup from './components/NewAgeGroup'
 
 
 class App extends React.Component {
@@ -38,6 +39,11 @@ class App extends React.Component {
 				link: "/delete",
 				name: "Delete",
 				component: Delete
+			},
+			{
+				link: '/setAgeGroup',
+				name: "Set New Age Group",
+				component: NewAgeGroup
 			},
 			{
 				link: "/questions",
