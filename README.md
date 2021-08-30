@@ -3,6 +3,7 @@ Vaccination project for COMP-353 database class. Fully functioning React app wit
 
 ## Note:
 Data is not provided.
+Nor are the database scripts provided currently. 
 
 # Deploy
 Use the deploy script to build and deploy the application. This script should be in the directory where Apache will read the files.
