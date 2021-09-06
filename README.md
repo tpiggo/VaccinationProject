@@ -1,5 +1,5 @@
 # VaccinationProject
-Vaccination project for COMP-353 database class. Fully functioning React app with backend service provided by Apache and PHP. 
+Vaccination project for COMP-353 database class. Fully functioning React app with backend service provided by Apache and PHP. Testing something. 
 
 ## Note:
 Data is not provided.
